@@ -50,6 +50,14 @@
           <p>
             <a href="http://bit.ly/treehacks-git">http://bit.ly/treehacks-git</a>
           </p>
+          <aside class="notes">
+            <ul>
+              <li>We as a company visit many hackathons across country and realized that some students have
+            challenge working with git</li>
+            <li>The last thing you want to do is loosing your sleep while dealing with merge conflicts</li>
+            <li>Give intro to git and basic commands that will help you collaborate</li>
+            </ul>
+          </aside>
         </section>
 
         <section>
@@ -119,6 +127,22 @@
 
         <section>
           <section>
+            <h2>Commit Objects</h2>
+            <p>Git is DAG that holds snapshots of commit objects as nodes</p>
+          </section>
+          <section>
+            <h2>What does commit object hold?</h2>
+            <ul>
+              <li>reference to parent commit, if any</li>
+              <li>tree - set of files conveying current state of the project</li>
+              <li>author info, commiter info, commit message, etc.</li>
+            </ul>
+            <p>Commit object is uniquely identified by a 40-character SHA1 hash</p>
+          </section>
+          <section data-background="http://git-scm.com/figures/18333fig0301-tn.png" data-background-size="600px">
+          </section>
+
+          <section>
             <h2>Creating a commit object</h2>
             <p>Create a new file or modify existing</p>
             <pre>
@@ -140,6 +164,9 @@
             # README
               </code>
             </pre>
+            <aside class="notes">
+              When creating a new file or updating existing file and saving those changes will create a commit object
+            </aside>
           </section>
 
           <section>
@@ -158,19 +185,6 @@
             </pre>
           </section>
 
-          <section>
-            <h2>What does commit object hold?</h2>
-            <p>Commit is a snaphot of recent changes made</p>
-            <ul>
-              <li>reference to parent commit, if any</li>
-              <li>tree - set of files conveying current state of the project</li>
-              <li>author info, commiter info, commit message, etc.</li>
-            </ul>
-
-            <p>Commit object is uniquely identified by a 40-character SHA1 hash</p>
-          </section>
-          <section data-background="http://git-scm.com/figures/18333fig0301-tn.png" data-background-size="600px">
-          </section>
           <section>
             <h2>My personal workflow</h2>
             <ol>
