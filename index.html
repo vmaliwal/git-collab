@@ -65,7 +65,7 @@
             <h2>What does .git include?</h2>
             <ul>
               <li>commit objects</li>
-              <li>HEAD(s) - a set of reference to commit objects</li>
+              <li>HEAD - a set of reference to commit objects</li>
               <li>..more..</li>
             </ul>
           </section>
@@ -88,14 +88,26 @@
               $ git init
               </code>
             </pre>
-            <p>init command creates a .git subdirectory in [project-name]</p>
+            <pre>
+              <code>
+                    git-collab/
+                      .git/
+                        config
+                        description
+                        HEAD
+                        hooks/
+                        info/
+                        objects/
+                        refs/
+              </code>
+            </pre>
           </section>
           <section>
             <h2>Cloning existing repository</h2>
             <pre>
               <code>
         $ git clone [git-url]
-        $ git clone https://github.com/hakimel/reveal.js.git
+        $ git clone https://github.com/vmaliwal/git-collab.git
               </code>
             </pre>
           </section>
@@ -105,6 +117,28 @@
           <section>
             <h2>Creating a commit object</h2>
             <p>Create a new file or modify existing</p>
+            <pre>
+              <code>
+            $ echo "Introduction to Git" > README
+              </code>
+            </pre>
+            <pre>
+              <code>
+            $ git status
+            # On branch master
+            #
+            # Initial commit
+            #
+            # Untracked files:
+            #   (use "git add [file]..." 
+            # to include in what will be committed)
+            #
+            # README
+              </code>
+            </pre>
+          </section>
+
+          <section>
             <pre>
               <code>
                 $ git add [file-name]
@@ -119,6 +153,7 @@
               </code>
             </pre>
           </section>
+
           <section>
             <h2>What does commit object hold?</h2>
             <p>Commit is a snaphot of recent changes made</p>
@@ -190,7 +225,7 @@
           <section>
             <h2>Merging</h2>
             <pre>
-              <code>$ git merge [head|branch-name]</code>
+              <code>$ git merge [branch-name]</code>
             </pre>
           </section>
           <section>
@@ -297,29 +332,90 @@
 
         <section>
           <h2><span style="text-transform: lowercase;">.gitignore</span> the unsung hero</h2>
-          <li>It is very important to have this file in your project root directory to avoid merge conflicts from auto-generated code from VM, IDE, etc.</p>
-          <li>Google for gitignore nodejs/golang/java/android/iOS</p>
+          <ul>
+            <li>It is very important to have this file in your project root directory to avoid merge conflicts from auto-generated code from VM, IDE, etc.</li>
+            <li>Google for gitignore nodejs/golang/java/android/iOS</li>
+        </ul>
         </section>
 
         <section>
-          <h2>My personal collaboration workflow for a hackathon</h2>
-          <ol>
-            <li>Create new remote git repository</li>
-            <li>Intialize git into existing project(if exist and skip step 3)</li>
-            <li>Clone remote repository into local machine</li>
-            <li>Add project/environment/framework specific .gitignore file</li>
-            <li>$ git add -A</li>
-            <li>$ git commit -m "initial commit"</li>
-            <li>$ git push origin master</li>
-            <li>Make sure master branch only contains runnable/working code</li>
-            <li>Create develop branch $ git checkout -b develop</li>
-            <li>Add new changes, if any, and push develop to remote $ git push origin develop</li>
-            <li>Ask your developer friend to clone remote repository</li>
-            <li>Crank out more code</li>
-            <li>Commit your changes</li>
-            <li>If pushing to remote make sure to pull if there are any existing commit on remote</li>
-            <li>If code looks okay, merge develop to master</li>
-          </ol>
+          <section>
+            <h2>Merge conflicts</h2>
+            <p>While pulling or merging a branch merge conflicts can occur due to conflicting changes</p>
+          </section>
+          <section>
+            <img src="images/1.png">
+          </section>
+          <section>
+            <pre>
+              <code>
+                $ git checkout -b develop
+              </code>
+            </pre>
+          </section>
+          <section>
+            <img src="images/2.png">
+          </section>
+          <section>
+            <pre>
+              <code>
+              $ git branch
+              * develop
+                master 
+              </code>
+            </pre>
+          </section>
+          <section>
+            <pre>
+              <code>$ git checkout master</code>
+            </pre>
+            <img src="images/3.png">
+          </section>
+          <section>
+            <pre>
+              <code>
+  $ git merge develop
+  Auto-merging app.js
+  CONFLICT (content): Merge conflict in app.js
+  Automatic merge failed; fix conflicts and then commit the result.
+              </code>
+            </pre>
+          </section>
+          <section>
+            <img src="images/4.png">
+          </section>
+          <section>
+            <h3>$ git mergetool</h3>
+            <img src="images/5.png">
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>My personal collaboration workflow for a hackathon</h3>
+            <ol>
+              <li>Create new remote git repository</li>
+              <li>Intialize git into existing project(if exist and skip step 3)</li>
+              <li>Clone remote repository into local machine</li>
+              <li>Add project/framework specific .gitignore file</li>
+              <li>$ git commit -a -m "initial commit"</li>
+              <li>$ git push origin master</li>
+              <li>Make sure master branch only contains runnable/working code</li>
+              <li>Create develop branch $ git checkout -b develop</li>
+              <li>Add new changes, if any, and push develop to remote $ git push origin develop</li>
+            </ol>
+          </section>
+
+          <section>
+            <h3>..continue</h3>
+            <ol>
+              <li>Ask developer friend to clone remote repository</li>
+              <li>Crank out more code</li>
+              <li>Commit changes</li>
+              <li>If pushing to remote make sure to pull if there are any existing commit on remote</li>
+              <li>If code looks okay, merge develop to master</li>
+            </ol>
+          </section>
         </section>
 
       </div>
