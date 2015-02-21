@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Git Collaboration</title>
+
+    <meta name="description" content="Intorduction to Git collaboration in a hackathon setting">
+    <meta name="author" content="Varun Maliwal">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Git Collaboration</h1>
+          <h3>.. in a hackathon</h3>
+          <p>
+            <small>Created by Varun Maliwal</a> / <a href="http://twitter.com/vroom_">@vroom_</a></small>
+          </p>
+        </section>
+
+        <section>
+          <h2>What is Git?</h2>
+          <p>
+            A distributed version control system.. Helps you manage different versions of files and collaboration over period of time.
+          </p>
+        </section>
+
+        <!-- Example of nested vertical slides -->
+        <section>
+          <section>
+            <h2>Git Repository</h2>
+            <p>Git stores information about your project in .git subdirectory called as repository</p>
+          </section>
+          <section>
+            <h2>What does .git include?</h2>
+            <ul>
+              <li>commit objects</li>
+              <li>HEAD(s) - a set of reference to commit objects</li>
+              <li>..more..</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Getting a Git repository</h2>
+            <ul>
+              <li>Initalize Repository into existing directory</li>
+              <li>Cloning Repository from remote server(github, bitbucket, etc.)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Initializing Repository</h2>
+            <pre>
+              <code>
+              $ mkdir [project-name]
+              $ cd [project-name]
+              $ git init
+              </code>
+            </pre>
+            <p>init command creates a .git subdirectory in [project-name]</p>
+          </section>
+          <section>
+            <h2>Cloning existing repository</h2>
+            <pre>
+              <code>
+        $ git clone [git-url]
+        $ git clone https://github.com/hakimel/reveal.js.git
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Creating a commit object</h2>
+            <p>Create a new file or modify existing</p>
+            <pre>
+              <code>
+                $ git add [file-name]
+                $ git commit -m "Initial commit"
+              </code>
+            </pre>
+            <p>Also</p>
+            <pre>
+              <code>
+                $ git add . //to add all modified files, or
+                $ git commit -a -m "Initial commit"
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>What does commit object hold?</h2>
+            <p>Commit is a snaphot of recent changes made</p>
+            <ul>
+              <li>reference to parent commit, if any</li>
+              <li>tree - set of files conveying current state of the project</li>
+              <li>author info, commiter info, commit message, etc.</li>
+            </ul>
+
+            <p>Commit object is uniquely identified by a 40-character SHA1 hash</p>
+          </section>
+          <section data-background="http://git-scm.com/figures/18333fig0301-tn.png" data-background-size="600px">
+          </section>
+          <section>
+            <h2>My personal workflow</h2>
+            <ol>
+              <li>Make changes</li>
+              <li><span style="color: #1b91ff"> $ git status</span> - to verify what files I have changed</li>
+              <li><span style="color: #1b91ff"> $ git diff [file-name]</span> - to review a change made in a specific file</li>
+              <li><span style="color: #1b91ff">$ git commit -a -m "commit message"</span></li>
+            </ol>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Branching</h2>
+            <p>A branch is collection of commit objects</p>
+            <p>When intializing a git repo the default branch is master</p>
+            <pre>
+              <code>
+                (1) -- (2) -- (3)
+                               |
+                             master
+                               |
+                              HEAD
+              </code>
+            </pre>
+            <p>HEAD points to commit (3) on master branch</p>
+          </section>
+          <section>
+            <h2>Switching to a new branch</h2>
+            <pre>
+              <code>
+                // creates a new branch
+                $ git branch [new-branch-name] 
+                // move HEAD to point to new branch
+                $ git checkout [new-branch-name] 
+              </code>
+            </pre>
+            <pre>
+              <code>
+                $ git checkout -b [new-branch-name]
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>My personal workflow</h2>
+            <ol>
+              <li>Create a new branch</li>
+              <li>Make code changes</li>
+              <li>Commit changes</li>
+              <li>Run tests on code</li>
+              <li>If test success merge those changes back to master branch</li>
+            </ol>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Merging</h2>
+            <pre>
+              <code>$ git merge [head|branch-name]</code>
+            </pre>
+          </section>
+          <section>
+            <h2>Before merging</h2>
+            <pre>
+              <code>
+                                    bug-fix 
+                                      |
+                         +----(4)----(5)
+                        /             
+              (1) -- (2) -- (3)
+                             |
+                           master
+                             |
+                            HEAD
+
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>$ git merge bug-fix</h2>
+            <pre>
+              <code>
+                                    bug-fix 
+                                      |
+                         +----(4)----(5)+
+                        /                \
+              (1) -- (2) -- (3)----------(6)
+                                          |
+                                        master
+                                          |
+                                         HEAD
+
+              </code>
+            </pre>
+            <p>(6) contains changes between (5) and (2) merged into (3)</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Collaboration</h2>
+            <p>Distributed version control model to collaborate between multiple developers.</p>
+            <ul>
+              <li>Remote repository</li>
+              <li>Pull remote changes</li>
+              <li>Push local changes to remote</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Remote repository</h2>
+            <p>Remote repositories are versions of your project that are hosted on the Internet or network somewhere.</p>
+            <ul>
+              <li>Create a new remote repository(on github, bitbucket, etc.) and clone to your local machine. Or,</li>
+              <li>Add existing git reposity from your local machine to remote</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Create a new remote repo and clone to your local machine</h2>
+            <ul>
+              <li>Create new remote repository on github or bitbucket</li>
+              <li>$ git clone [git-remote-repo-url].git</li>
+            </ul>
+            <p>As name suggests <span style="color: #1b91ff">clone</span> command can be used to clone any remote repository</p> 
+          </section>
+          <section>
+            <h2>Add existing git repo from local machine to remote</h2>
+            <p>Create new repository on github or bitbucket</p>
+            <p>On your local machine..</p>
+            <pre>
+              <code>
+      $ git remote add origin [git-remote-repo-url].git
+      $ git push origin master
+              </code>
+            </pre>
+            <p><span style="color: #1b91ff">origin</span> is a remote repository reference that git uses</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Pulling remote changes</h2>
+            <pre>
+              <code>
+      $ git pull [remote-repo-reference] [remote-branch-name]
+      $ git pull origin master
+              </code>
+            </pre>
+          </section>
+          
+          <section>
+            <h2>Pushing changes to remote</h2>
+            <pre>
+              <code>
+      $ git push [remote-repo-reference] [remote-branch-name]
+      $ git push origin master
+              </code>
+            </pre>
+          </section>
+        </section>
+
+        <section>
+          <h2><span style="text-transform: lowercase;">.gitignore</span> the unsung hero</h2>
+          <li>It is very important to have this file in your project root directory to avoid merge conflicts from auto-generated code from VM, IDE, etc.</p>
+          <li>Google for gitignore nodejs/golang/java/android/iOS</p>
+        </section>
+
+        <section>
+          <h2>My personal collaboration workflow for a hackathon</h2>
+          <ol>
+            <li>Create new remote git repository</li>
+            <li>Intialize git into existing project(if exist and skip step 3)</li>
+            <li>Clone remote repository into local machine</li>
+            <li>Add project/environment/framework specific .gitignore file</li>
+            <li>$ git add -A</li>
+            <li>$ git commit -m "initial commit"</li>
+            <li>$ git push origin master</li>
+            <li>Make sure master branch only contains runnable/working code</li>
+            <li>Create develop branch $ git checkout -b develop</li>
+            <li>Add new changes, if any, and push develop to remote $ git push origin develop</li>
+            <li>Ask your developer friend to clone remote repository</li>
+            <li>Crank out more code</li>
+            <li>Commit your changes</li>
+            <li>If pushing to remote make sure to pull if there are any existing commit on remote</li>
+            <li>If code looks okay, merge develop to master</li>
+          </ol>
+        </section>
+
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>
