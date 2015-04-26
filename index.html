@@ -41,6 +41,8 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
+
+
         <section>
           <h1>Git Collaboration</h1>
           <h3>...Coding together is better</h3>
@@ -63,6 +65,8 @@
             </ul>
           </aside>
         </section>
+
+
         <section>
           <section>
             <h2>What is Git?</h2>
@@ -106,13 +110,21 @@
             </aside>
           </section>
         </section>
+
+
         <section>
           <section>
             <h2>Key Git Concepts</h2>
             <ul>
               <li>Staging Area / Working Copy</li>
               <li>Branches</li>
+              <li>.git repository</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Are git and github the same?</li>
+              </ul>
+            </aside>
           </section>
           <section>
             <h2>Edit / Stage / Commit</h2>
@@ -124,20 +136,9 @@
               </ul>
             </aside>
           </section>
-
-        </section>
-        <section>
           <section>
-            <h2>Additional Git Concepts</h2>
-            <ul>
-              <li>Git Config</li>
-              <li>.gitignore</li>
-            </ul>
+            <h2>Branches</h2>
           </section>
-        </section>
-
-        <!-- Example of nested vertical slides -->
-        <section>
           <section>
             <h2>Git Repository</h2>
             <p>Git stores information about your project in .git subdirectory called as repository</p>
@@ -149,6 +150,23 @@
               <li>HEAD - a set of reference to commit objects</li>
               <li>..more..</li>
             </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Additional Git Concepts</h2>
+            <ul>
+              <li>Git Config</li>
+              <li>.gitignore</li>
+            </ul>
+          </section>
+        </section>
+
+
+        <section>
+          <section>
+            <h2>Git in Action</h2>
           </section>
           <section>
             <h2>Check for git repo</h2>
@@ -214,6 +232,7 @@ index f08ca69..10ea20b 100644
           </section>
         </section>
 
+
         <section>
           <section>
             <h2>Getting a Git repository</h2>
@@ -256,6 +275,7 @@ index f08ca69..10ea20b 100644
           </section>
         </section>
 
+
         <section>
           <section>
             <h2>Commit Objects</h2>
@@ -272,7 +292,6 @@ index f08ca69..10ea20b 100644
           </section>
           <section data-background="http://git-scm.com/figures/18333fig0301-tn.png" data-background-size="600px">
           </section>
-
           <section>
             <h2>Creating a commit object</h2>
             <p>Create a new file or modify existing</p>
@@ -299,7 +318,6 @@ index f08ca69..10ea20b 100644
               When creating a new file or updating existing file and saving those changes will create a commit object
             </aside>
           </section>
-
           <section>
             <pre>
               <code>
@@ -315,7 +333,6 @@ index f08ca69..10ea20b 100644
               </code>
             </pre>
           </section>
-
           <section>
             <h2>My personal workflow</h2>
             <ol>
@@ -326,6 +343,8 @@ index f08ca69..10ea20b 100644
             </ol>
           </section>
         </section>
+
+
         <section>
           <section>
             <h2>Branching</h2>
@@ -373,6 +392,7 @@ index f08ca69..10ea20b 100644
           </section>
         </section>
 
+
         <section>
           <section>
             <h2>Merging</h2>
@@ -417,6 +437,7 @@ index f08ca69..10ea20b 100644
           </section>
         </section>
 
+
         <section>
           <section>
             <h2>Collaboration</h2>
@@ -428,6 +449,7 @@ index f08ca69..10ea20b 100644
             </ul>
           </section>
         </section>
+
 
         <section>
           <section>
@@ -460,6 +482,7 @@ index f08ca69..10ea20b 100644
           </section>
         </section>
 
+
         <section>
           <section>
             <h2>Pulling remote changes</h2>
@@ -470,7 +493,6 @@ index f08ca69..10ea20b 100644
               </code>
             </pre>
           </section>
-          
           <section>
             <h2>Pushing changes to remote</h2>
             <pre>
@@ -482,6 +504,7 @@ index f08ca69..10ea20b 100644
           </section>
         </section>
 
+
         <section>
           <h2><span style="text-transform: lowercase;">.gitignore</span> the unsung hero</h2>
           <ul>
@@ -489,6 +512,7 @@ index f08ca69..10ea20b 100644
             <li>Google for gitignore nodejs/golang/java/android/iOS</li>
         </ul>
         </section>
+
 
         <section>
           <section>
@@ -542,6 +566,8 @@ index f08ca69..10ea20b 100644
           </section>
         </section>
 
+
+
         <section>
           <section>
             <h3>My personal collaboration workflow for a hackathon</h3>
@@ -557,6 +583,8 @@ index f08ca69..10ea20b 100644
               <li>Add new changes, if any, and push develop to remote <span style="color: #1b91ff"> $ git push origin develop </span></li>
             </ol>
           </section>
+
+
 
           <section>
             <h3>..continue</h3>
