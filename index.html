@@ -121,8 +121,9 @@
             <ul>
               <li>Staging Area / Working Copy</li>
               <li>Commit Object</li>
-              <li>(Needs more detail)Branches</li>
               <li>.git repository</li>
+              <li>Branches</li>
+              <li>Merging</li>
             </ul>
             <aside class="notes">
               <ul>
@@ -156,9 +157,6 @@
           <section data-background="http://git-scm.com/figures/18333fig0301-tn.png" data-background-size="600px">
           </section>
           <section>
-            <h2>Branches Placeholder</h2>
-          </section>
-          <section>
             <h2>Git Repository</h2>
             <p>Git stores information about your project in .git subdirectory called as repository</p>
           </section>
@@ -170,29 +168,93 @@
               <li>..more..</li>
             </ul>
           </section>
+          <section>
+            <h2>Branching</h2>
+            <p>A branch is collection of commit objects</p>
+            <p>When intializing a git repo the default branch is master</p>
+            <pre>
+              <code>
+                (1) -- (2) -- (3)
+                               |
+                             master
+                               |
+                              HEAD
+              </code>
+            </pre>
+            <p>HEAD points to commit (3) on master branch</p>
+            <aside class="notes">
+              You can think of the HEAD as the "current branch". When you switch branches with git checkout, the HEAD revision changes to point to the tip of the new branch.
+            </aside>
+          </section>
+          <section>
+            <h2>Switching to a new branch</h2>
+            <pre>
+              <code>
+                // creates a new branch
+                $ git branch [new-branch-name] 
+                // move HEAD to point to new branch
+                $ git checkout [new-branch-name] 
+              </code>
+            </pre>
+            <pre>
+              <code>
+                $ git checkout -b [new-branch-name]
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>My personal workflow</h2>
+            <ol>
+              <li>Create a new branch</li>
+              <li>Make code changes</li>
+              <li>Commit changes</li>
+              <li>Run tests on code</li>
+              <li>If test success merge those changes back to master branch</li>
+            </ol>
+          </section>
+                    <section>
+            <h2>Merging</h2>
+            <pre>
+              <code>$ git merge [branch-name]</code>
+            </pre>
+          </section>
+          <section>
+            <h2>Before merging</h2>
+            <pre>
+              <code>
+                                    bug-fix 
+                                      |
+                         +----(4)----(5)
+                        /             
+              (1) -- (2) -- (3)
+                             |
+                           master
+                             |
+                            HEAD
+
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>$ git merge bug-fix</h2>
+            <pre>
+              <code>
+                                    bug-fix 
+                                      |
+                         +----(4)----(5)+
+                        /                \
+              (1) -- (2) -- (3)----------(6)
+                                          |
+                                        master
+                                          |
+                                         HEAD
+
+              </code>
+            </pre>
+            <p>(6) contains changes between (5) and (2) merged into (3)</p>
+          </section>
         </section>
 
-
-
-        <section>
-          <section>
-            <h2>Additional Git Concepts</h2>
-            <ul>
-              <li>Git Config</li>
-              <li>.gitignore</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Git Config Place Holder</h2>
-          </section>
-          <section>
-            <h2><span style="text-transform: lowercase;">.gitignore</span> the unsung hero</h2>
-            <ul>
-              <li>It is very important to have this file in your project root directory to avoid merge conflicts from auto-generated code from VM, IDE, etc.</li>
-              <li>Google for gitignore nodejs/golang/java/android/iOS</li>
-            </ul>
-          </section>
-        </section>
 
 
 
@@ -204,6 +266,7 @@
               <li>Init</li>
               <li>Clone</li>
               <li>Diff</li>
+              <li>Commit</li>
             </ul>
           </section>
           <section>
@@ -341,112 +404,30 @@
               </code>
             </pre>
           </section>
-          <section>
-            <h2>My personal workflow</h2>
-            <ol>
-              <li>Make changes</li>
-              <li><span style="color: #1b91ff"> $ git status</span> - to verify what files I have changed</li>
-              <li><span style="color: #1b91ff"> $ git diff [file-name]</span> - to review a change made in a specific file</li>
-              <li><span style="color: #1b91ff">$ git commit -a -m "commit message"</span></li>
-            </ol>
-          </section>
         </section>
 
 
 
-        <section>
+
+<section>
           <section>
-            <h2>Branching</h2>
-            <p>A branch is collection of commit objects</p>
-            <p>When intializing a git repo the default branch is master</p>
-            <pre>
-              <code>
-                (1) -- (2) -- (3)
-                               |
-                             master
-                               |
-                              HEAD
-              </code>
-            </pre>
-            <p>HEAD points to commit (3) on master branch</p>
-            <aside class="notes">
-              You can think of the HEAD as the "current branch". When you switch branches with git checkout, the HEAD revision changes to point to the tip of the new branch.
-            </aside>
+            <h2>Additional Git Concepts</h2>
+            <ul>
+              <li>Git Config</li>
+              <li>.gitignore</li>
+            </ul>
           </section>
           <section>
-            <h2>Switching to a new branch</h2>
-            <pre>
-              <code>
-                // creates a new branch
-                $ git branch [new-branch-name] 
-                // move HEAD to point to new branch
-                $ git checkout [new-branch-name] 
-              </code>
-            </pre>
-            <pre>
-              <code>
-                $ git checkout -b [new-branch-name]
-              </code>
-            </pre>
+            <h2>Git Config Place Holder</h2>
           </section>
           <section>
-            <h2>My personal workflow</h2>
-            <ol>
-              <li>Create a new branch</li>
-              <li>Make code changes</li>
-              <li>Commit changes</li>
-              <li>Run tests on code</li>
-              <li>If test success merge those changes back to master branch</li>
-            </ol>
+            <h2><span style="text-transform: lowercase;">.gitignore</span> the unsung hero</h2>
+            <ul>
+              <li>It is very important to have this file in your project root directory to avoid merge conflicts from auto-generated code from VM, IDE, etc.</li>
+              <li>Google for gitignore nodejs/golang/java/android/iOS</li>
+            </ul>
           </section>
         </section>
-
-
-
-        <section>
-          <section>
-            <h2>Merging</h2>
-            <pre>
-              <code>$ git merge [branch-name]</code>
-            </pre>
-          </section>
-          <section>
-            <h2>Before merging</h2>
-            <pre>
-              <code>
-                                    bug-fix 
-                                      |
-                         +----(4)----(5)
-                        /             
-              (1) -- (2) -- (3)
-                             |
-                           master
-                             |
-                            HEAD
-
-              </code>
-            </pre>
-          </section>
-          <section>
-            <h2>$ git merge bug-fix</h2>
-            <pre>
-              <code>
-                                    bug-fix 
-                                      |
-                         +----(4)----(5)+
-                        /                \
-              (1) -- (2) -- (3)----------(6)
-                                          |
-                                        master
-                                          |
-                                         HEAD
-
-              </code>
-            </pre>
-            <p>(6) contains changes between (5) and (2) merged into (3)</p>
-          </section>
-        </section>
-
 
 
         <section>
@@ -459,11 +440,6 @@
               <li>Push local changes to remote</li>
             </ul>
           </section>
-        </section>
-
-
-
-        <section>
           <section>
             <h2>Remote repository</h2>
             <p>Remote repositories are versions of your project that are hosted on the Internet or network somewhere.</p>
@@ -492,11 +468,6 @@
             </pre>
             <p><span style="color: #1b91ff">origin</span> is a remote repository reference that git uses</p>
           </section>
-        </section>
-
-
-
-        <section>
           <section>
             <h2>Pulling remote changes</h2>
             <pre>
@@ -606,9 +577,18 @@
         <section>
           <h3>References</h3>
           <ul>
-            <li><a href="http://git-scm.com/">http://git-scm.com/</a></li>
-            <li><a href="http://stackoverflow.com/questions/tagged/git"></a>http://stackoverflow.com</li>
-            <li><a href="https://help.github.com/">https://help.github.com/</a></li>
+            <li>
+              <a href="http://git-scm.com/">http://git-scm.com/</a>
+            </li>
+            <li>
+              <a href="http://stackoverflow.com/questions/tagged/git">http://stackoverflow.com</a>
+              </li>
+            <li>
+              <a href="https://help.github.com/">https://help.github.com/</a>
+            </li>
+            <li>
+              <a href="https://github.com/vmaliwal/git-collab">Original Presentaion</a>
+            </li>
           </ul>
         </section>
 
