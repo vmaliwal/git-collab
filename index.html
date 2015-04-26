@@ -43,6 +43,7 @@
       <div class="slides">
 
 
+
         <section>
           <h1>Git Collaboration</h1>
           <h3>...Coding together is better</h3>
@@ -51,7 +52,7 @@
             <small>Updated By <br/> Alex Niderberg</a> / <a href="http://twitter.com/vroom_">@AlexNiderberg</a></small><br/>
             <small>Master Software Engineer @ Capital One Labs</small>
           </p>
-        </br>
+          </br>
           <p>
             <a href="http://bit.ly/1A1DKFE">http://bit.ly/1A1DKFE</a>
           </p>
@@ -65,6 +66,7 @@
             </ul>
           </aside>
         </section>
+
 
 
         <section>
@@ -112,6 +114,7 @@
         </section>
 
 
+
         <section>
           <section>
             <h2>Key Git Concepts</h2>
@@ -153,6 +156,8 @@
           </section>
         </section>
 
+
+
         <section>
           <section>
             <h2>Additional Git Concepts</h2>
@@ -161,7 +166,15 @@
               <li>.gitignore</li>
             </ul>
           </section>
+            <section>
+              <h2><span style="text-transform: lowercase;">.gitignore</span> the unsung hero</h2>
+              <ul>
+                <li>It is very important to have this file in your project root directory to avoid merge conflicts from auto-generated code from VM, IDE, etc.</li>
+                <li>Google for gitignore nodejs/golang/java/android/iOS</li>
+            </ul>
+          </section>
         </section>
+
 
 
         <section>
@@ -172,9 +185,9 @@
             <h2>Check for git repo</h2>
             <pre>
               <code>
-$git status
-fatal: Not a git repository (or any of the 
-parent directories): .git
+    $git status
+    fatal: Not a git repository (or any of the 
+    parent directories): .git
               </code>
             </pre>
           </section>
@@ -182,25 +195,25 @@ parent directories): .git
             <h2>Untracked Changes / Files</h2>
             <pre>
               <code>
-$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
+    $ git status
+    On branch master
+    Your branch is up-to-date with 'origin/master'.
 
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git checkout -- <file>..." to discard changes in working directory)
 
-  modified:   README.md
-  modified:   index.html
+      modified:   README.md
+      modified:   index.html
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
 
-  images/CentralizedVCS.png
-  images/DistributedVCD.png
-  images/LinusViewDVCS.png
+      images/CentralizedVCS.png
+      images/DistributedVCD.png
+      images/LinusViewDVCS.png
 
-no changes added to commit (use "git add" and/or "git commit -a")
+    no changes added to commit (use "git add" and/or "git commit -a")
               </code>
             </pre>
           </section>
@@ -208,29 +221,30 @@ no changes added to commit (use "git add" and/or "git commit -a")
             <h2>Git Diff</h2>
             <pre>
               <code>
-$ git diff README.md 
-diff --git a/README.md b/README.md
-index f08ca69..10ea20b 100644
---- a/README.md
-+++ b/README.md
-@@ -1 +1,9 @@
--### Introduction to Git 
-\ No newline at end of file
-+### Introduction to Git 
-+
-+- run
-+```
-+npm install
-+grunt serve
-+```
-+
-+- Make changes by modifying index.html
-\ No newline at end of file
+    $ git diff README.md 
+    diff --git a/README.md b/README.md
+    index f08ca69..10ea20b 100644
+    --- a/README.md
+    +++ b/README.md
+    @@ -1 +1,9 @@
+    -### Introduction to Git 
+    \ No newline at end of file
+    +### Introduction to Git 
+    +
+    +- run
+    +```
+    +npm install
+    +grunt serve
+    +```
+    +
+    +- Make changes by modifying index.html
+    \ No newline at end of file
 
               </code>
             </pre>
           </section>
         </section>
+
 
 
         <section>
@@ -274,6 +288,7 @@ index f08ca69..10ea20b 100644
             </pre>
           </section>
         </section>
+
 
 
         <section>
@@ -345,6 +360,7 @@ index f08ca69..10ea20b 100644
         </section>
 
 
+
         <section>
           <section>
             <h2>Branching</h2>
@@ -393,6 +409,7 @@ index f08ca69..10ea20b 100644
         </section>
 
 
+
         <section>
           <section>
             <h2>Merging</h2>
@@ -438,6 +455,7 @@ index f08ca69..10ea20b 100644
         </section>
 
 
+
         <section>
           <section>
             <h2>Collaboration</h2>
@@ -449,6 +467,7 @@ index f08ca69..10ea20b 100644
             </ul>
           </section>
         </section>
+
 
 
         <section>
@@ -483,6 +502,7 @@ index f08ca69..10ea20b 100644
         </section>
 
 
+
         <section>
           <section>
             <h2>Pulling remote changes</h2>
@@ -504,14 +524,6 @@ index f08ca69..10ea20b 100644
           </section>
         </section>
 
-
-        <section>
-          <h2><span style="text-transform: lowercase;">.gitignore</span> the unsung hero</h2>
-          <ul>
-            <li>It is very important to have this file in your project root directory to avoid merge conflicts from auto-generated code from VM, IDE, etc.</li>
-            <li>Google for gitignore nodejs/golang/java/android/iOS</li>
-        </ul>
-        </section>
 
 
         <section>
@@ -550,10 +562,10 @@ index f08ca69..10ea20b 100644
           <section>
             <pre>
               <code>
-  $ git merge develop
-  Auto-merging app.js
-  CONFLICT (content): Merge conflict in app.js
-  Automatic merge failed; fix conflicts and then commit the result.
+      $ git merge develop
+      Auto-merging app.js
+      CONFLICT (content): Merge conflict in app.js
+      Automatic merge failed; fix conflicts and then commit the result.
               </code>
             </pre>
           </section>
@@ -583,9 +595,6 @@ index f08ca69..10ea20b 100644
               <li>Add new changes, if any, and push develop to remote <span style="color: #1b91ff"> $ git push origin develop </span></li>
             </ol>
           </section>
-
-
-
           <section>
             <h3>..continue</h3>
             <ol>
@@ -598,9 +607,8 @@ index f08ca69..10ea20b 100644
           </section>
         </section>
 
-        <section>
-          <h2>Thank You</h2>
-        </section>
+
+
 
         <section>
           <h3>References</h3>
@@ -611,15 +619,14 @@ index f08ca69..10ea20b 100644
           </ul>
         </section>
 
+
+
+
       </div>
-
     </div>
-
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
-
     <script>
-
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
@@ -640,8 +647,6 @@ index f08ca69..10ea20b 100644
           { src: 'plugin/notes/notes.js', async: true }
         ]
       });
-
     </script>
-
   </body>
 </html>
