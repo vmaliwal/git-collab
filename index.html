@@ -6,8 +6,9 @@
 
     <title>Git Collaboration</title>
 
-    <meta name="description" content="Intorduction to Git collaboration in a hackathon setting">
+    <meta name="description" content="How to code together using git.  Often students have to work individually in class so while they may understand git they don't understand how to work with a team to colloberate using git.">
     <meta name="author" content="Varun Maliwal">
+    <meta name="author" content="Alex Niderberg">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -42,29 +43,64 @@
       <div class="slides">
         <section>
           <h1>Git Collaboration</h1>
-          <h3>.. in a hackathon</h3>
+          <h3>...Coding together better</h3>
           <p>
-            <small>Created By <br/> Varun Maliwal</a> / <a href="http://twitter.com/vroom_">@vroom_</a></small><br/>
-            <small>Software Engineer @ Capital One</small>
+            <small>Updated By <br/> Alex Niderberg</a> / <a href="http://twitter.com/vroom_">@AlexNiderberg</a></small><br/>
+            <small>Master Software Engineer @ Capital One Labs</small>
           </p>
           <p>
-            <a href="http://bit.ly/treehacks-git">http://bit.ly/treehacks-git</a>
+            <a href="http://bit.ly/treehacks-git">(Update this)http://bit.ly/treehacks-git</a>
           </p>
           <aside class="notes">
             <ul>
               <li>We as a company visit many hackathons across country and realized that some students have
             challenge working with git</li>
             <li>The last thing you want to do is loosing your sleep while dealing with merge conflicts</li>
+            <li>Additionally we find students who are not using git effectively and intern wasting precious time at the Hackathons</li>
             <li>Give intro to git and basic commands that will help you collaborate</li>
             </ul>
           </aside>
         </section>
-
         <section>
-          <h2>What is Git?</h2>
-          <p>
-            A distributed version control system.. Helps you manage different versions of files and collaboration over period of time.
-          </p>
+          <section>
+            <h2>What is Git?</h2>
+            <p>
+              A distributed version control system.. Helps you manage different versions of files and collaboration over period of time.  Additionally it allows you to work off line.
+            </p>
+          </section>
+          <section>
+            <h2>Linus 2007 git overview</h2>
+            <img src="images/LinusViewDVCS.png" alt="Linus the value of distribuition">
+            </br>
+            <small>Source: <a href="https://www.youtube.com/watch?v=4XpnKHJAok8#t=819">Linus 2007 Git Introduction</a></small>
+            <aside class="notes">
+              <ul>
+                <li>
+                  Using CVCS penalizes you from committing and branching since it is so expensive.  This causes developers to have very large commits.
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Centralized VCS</h2>
+            <img src="images/CentralizedVCS.png">
+            </br>
+            <small>Source: <a href="http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/">Illustrated Distributed Version Control</a></small>
+          </section>
+          <section>
+            <h2>Distributed VCS</h2>
+            <img src="images/DistributedVCD.png">
+            </br>
+            <small>Source: <a href="http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/">Illustrated Distributed Version Control</a></small>
+            <aside  class="notes">
+              <ul>
+                <li>Every copy of a git branch becomes it's own branch when it falls off line or out of sync with origin.
+                </li>
+                <li>Git has a built in check for disk / file corruption since files are tracked using a hash
+                </li>
+              </ul>
+            </aside>
+          </section>
         </section>
 
         <!-- Example of nested vertical slides -->
@@ -80,6 +116,70 @@
               <li>HEAD - a set of reference to commit objects</li>
               <li>..more..</li>
             </ul>
+          </section>
+          <section>
+            <h2>Check for git repo</h2>
+            <pre>
+              <code>
+                git status
+              </code>
+              <code>
+                fatal: Not a git repository (or any of the 
+                parent directories): .git
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Untracked Changes / Files</h2>
+            <pre>
+              <code>
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+  modified:   README.md
+  modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+  images/CentralizedVCS.png
+  images/DistributedVCD.png
+  images/LinusViewDVCS.png
+
+no changes added to commit (use "git add" and/or "git commit -a")
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Git Diff</h2>
+            <pre>
+              <code>
+$ git diff README.md 
+diff --git a/README.md b/README.md
+index f08ca69..10ea20b 100644
+--- a/README.md
++++ b/README.md
+@@ -1 +1,9 @@
+-### Introduction to Git 
+\ No newline at end of file
++### Introduction to Git 
++
++- run
++```
++npm install
++grunt serve
++```
++
++- Make changes by modifying index.html
+\ No newline at end of file
+
+              </code>
+            </pre>
           </section>
         </section>
 
