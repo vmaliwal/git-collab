@@ -25,3 +25,6 @@ grunt serve
 - Advance Commands / tips and tricks
 - My personal collaboration workflow for a hackathon
 - References
+
+##Other Resources
+- [A Yeoman generator for the awesome Reveal.js presentation framework.](https://github.com/slara/generator-reveal)
