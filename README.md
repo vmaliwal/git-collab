@@ -18,6 +18,7 @@ grunt serve
 ##Talk Outline
 
 ####Overview
+
 1. What is Git
 1. Git Key Concepts
 1. Git in Action
@@ -29,10 +30,12 @@ grunt serve
 1. References
 
 ####Details
+
   - Intro - Kaylyn and Alex
     - Discuss Hackathon Mentorship
   - Why discuss git today? 
     - Covering because at most hackathons see students who either have only used git individually or who don't understand the power of git.
+
 1. What is Git
   - Talk about Linus Creating git, what drove him to go this how long this initial process took
     - Who has used VCS other than git
