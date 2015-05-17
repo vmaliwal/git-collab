@@ -16,15 +16,61 @@ grunt serve
 - Then visit <username>.github.io/<project name>
 
 ##Talk Outline
-- What is Git
-- Git Key Concepts
-- Git in Action
-- Additional Git Concepts
-- Collaboration
-- Merge Conflicts
-- Advance Commands / tips and tricks
-- My personal collaboration workflow for a hackathon
-- References
+
+####Overview
+1. What is Git
+1. Git Key Concepts
+1. Git in Action
+1. Additional Git Concepts
+1. Collaboration
+1. Merge Conflicts
+1. Advance Commands / tips and tricks
+1. My personal collaboration workflow for a hackathon
+1. References
+
+####Details
+1. What is Git
+  - Talk about Linus Creating git, what drove him to go this how long this initial process took
+    - Who has used VCS other than git
+    - Who has heard of Linus Torvold?
+    - (Confirm in the article from Jim) He created the initial framework in a weekend and after a few hours it was self hosting or being used for the project’s version control
+1. Git Key Concepts
+  - Staging Area / Working Copy
+  - Git Repository
+    - What is included in .git
+  - Branches
+    - git branch -r
+  - Merging
+1. Git in Action
+  - git status
+    - Tracked vs untracked files / changes
+  - Git Diff
+  - init
+  - Clone
+  - Commit
+1. Additional Git Concepts
+  - (Git Config)
+  - .gitignore
+1. Collaboration
+  - Remote Repository
+  - Pulling Remote Changes
+  - Multiple remotes
+  - Fork and pull
+1. Merge Conflicts
+  - Merge Conflict example (potentially one for the calss to work through together)
+1. Advance Commands / tips and tricks
+  - *Unsure what to do?*
+    - Copy the directory you are working on and you will be able to roll back if you have any issues
+  - Rebase 
+    - Discuss how this is different than a merge 
+  - Squash
+  - Amend
+  - SSH keys
+  - Aliases
+1. My personal collaboration workflow for a hackathon
+ - Show the summit app as an example
+ - Everyone's commit history is initally messy, some clean it up with rebase or squash
+1. References
 
 ##Other Resources
 - [A Yeoman generator for the awesome Reveal.js presentation framework.](https://github.com/slara/generator-reveal)
