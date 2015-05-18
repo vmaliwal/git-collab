@@ -134,6 +134,21 @@
               </ul>
             </aside>
           </section>
+          <section>
+            <img src="images/socialGit/bitbucket_github.png">
+          </section>
+          <section>
+            <img src="images/socialGit/github.png">
+          </section>
+          <section>
+            <img src="images/socialGit/github-branches.png">
+          </section>
+          <section>
+            <img src="images/socialGit/github-mybranches.png">
+          </section>
+          <section>
+            <img src="images/socialGit/github-PR-collaboration.png">
+          </section>
         </section>
 
 
@@ -213,9 +228,9 @@
             <h2>Switching to a new branch</h2>
             <pre>
               <code>
-                // creates a new branch
+                # creates a new branch
                 $ git branch [new-branch-name] 
-                // move HEAD to point to new branch
+                # move HEAD to point to new branch
                 $ git checkout [new-branch-name] 
               </code>
             </pre>
@@ -426,13 +441,19 @@
                 $ git commit -a -m "Initial commit"
               </code>
             </pre>
+            <pre>
+              <code>
+                Git commit -a #is the same as using git add and then git commit
+                git config --global color.ui true
+              </code>
+            </pre>
           </section>
         </section>
 
 
 
 
-<section>
+        <section>
           <section>
             <h2>Additional Git Concepts</h2>
             <ul>
@@ -441,9 +462,15 @@
             </ul>
           </section>
           <section>
-            <h2>Git Config Place Holder</h2>
+            <h2>Git Config</h2>
+            <ul>
+              <li>git config --list</li>
+              <li>git config --global user.name "Your Name"</li>
+              <li>git config --global user.email yourEmail@gmail.com</li>
+            </ul>
           </section>
           <section>
+            <img src="images/supper-man.jpg" height="200">
             <h2><span style="text-transform: lowercase;">.gitignore</span> the unsung hero</h2>
             <ul>
               <li>It is very important to have this file in your project root directory to avoid merge conflicts from auto-generated code from VM, IDE, etc.</li>
@@ -486,7 +513,7 @@
             <pre>
               <code>
       $ git remote add origin [git-remote-repo-url].git
-      $ git push origin master
+      $ git push -u origin master
               </code>
             </pre>
             <p><span style="color: #1b91ff">origin</span> is a remote repository reference that git uses</p>
@@ -523,6 +550,10 @@
       origin  https://github.com/aln787/git-collab.git (push)
               </code>
             </pre>
+          </section>
+          <section>
+            <h1>Fork and Pull</h1>
+            <img src="images/socialGit/github-fork.png">
           </section>
         </section>
 
@@ -584,37 +615,21 @@
 
         <section>
           <section>
-            <h3>My personal collaboration workflow for a hackathon</h3>
-            <ol>
-              <li>Create new remote git repository</li>
-              <li>Intialize git into existing project(if exist and skip step 3)</li>
-              <li>Clone remote repository into local machine</li>
-              <li>Add project/framework specific .gitignore file</li>
-              <li><span style="color: #1b91ff">$ git commit -a -m "initial commit"</span></li>
-              <li><span style="color: #1b91ff">$ git push origin master</span></li>
-              <li>Make sure master branch only contains runnable/working code</li>
-              <li>Create develop branch <span style="color: #1b91ff"> $ git checkout -b develop</span></li>
-              <li>Add new changes, if any, and push develop to remote <span style="color: #1b91ff"> $ git push origin develop </span></li>
-            </ol>
+            <h1>Tips and Tricks</h1>
           </section>
           <section>
-            <h3>..continue</h3>
-            <ol>
-              <li>Ask developer friend to clone remote repository</li>
-              <li>Crank out more code</li>
-              <li>Commit changes</li>
-              <li>If pushing to remote make sure to pull if there are any existing commit on remote</li>
-              <li>If code looks okay, merge develop to master</li>
-            </ol>
-          </section>
+            <ul>
+              <li>If you are ever unsure what to do copy your project directory.</li>
+            </ul>
+          </section>          
         </section>
-
 
 
 
         <section>
           <h3>References</h3>
           <ul>
+            <!--http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control-->
             <li>
               <a href="http://git-scm.com/">http://git-scm.com/</a>
             </li>
@@ -623,6 +638,9 @@
               </li>
             <li>
               <a href="https://help.github.com/">https://help.github.com/</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=ZDR433b0HJY">Great git talk from one of the git scm writers.</a>
             </li>
             <li>
               <a href="https://github.com/vmaliwal/git-collab">Original Presentaion</a>
