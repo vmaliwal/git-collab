@@ -13,7 +13,8 @@ grunt serve
 
 **Changes must me pushed to the Github repo's gh-pages for the statis site to build.
 
-- Then visit <username>.github.io/<project name>
+- Then visit ```<username>.github.io/<project name>```
+  - [View this presentation.](http://aln787.github.io/git-collab/)
 
 ##Talk Outline
 
