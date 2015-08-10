@@ -642,11 +642,11 @@
           <section>
             <h2>Setting Up SSH Keys</h2>
               <pre><code>
-                $ ls -al ~/.ssh
-                $ ssh-keygen -t rsa -b 4096 -C "aniderberg@gmail.com"
-                $ eval "$(ssh-agent -s)"
-                $ ssh-add ~/.ssh/id_rsa
-                $ cat ~/.ssh/id_rsa.pub 
+    $ ls -al ~/.ssh
+    $ ssh-keygen -t rsa -b 4096 -C "youremail@email.com"
+    $ eval "$(ssh-agent -s)"
+    $ ssh-add ~/.ssh/id_rsa
+    $ cat ~/.ssh/id_rsa.pub 
               </code></pre>
               <p>Then add the output of the cat to your list of github ssh keys on the github site.</p>
           </section>
