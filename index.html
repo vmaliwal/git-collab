@@ -187,10 +187,6 @@
             <img src="images/git_local_remote.png">
           </section>
           <section>
-            <h2>Commit Objects</h2>
-            <p>Git is DAG that holds snapshots of commit objects as nodes</p>
-          </section>
-          <section>
             <h2>What does commit object hold?</h2>
             <ul>
               <li>reference to parent commit, if any</li>
@@ -644,10 +640,20 @@
             </ul>
           </section>
           <section>
+            <h2>Setting Up SSH Keys</h2>
+              <pre><code>
+                $ ls -al ~/.ssh
+                $ ssh-keygen -t rsa -b 4096 -C "aniderberg@gmail.com"
+                $ eval "$(ssh-agent -s)"
+                $ ssh-add ~/.ssh/id_rsa
+                $ cat ~/.ssh/id_rsa.pub 
+              </code></pre>
+              <p>Then add the output of the cat to your list of github ssh keys on the github site.</p>
+          </section>
+          <section>
             <h2>Additional Git Commands</h2>
             <ul>
               <li>git diff HEAD^ --word-diff</li>
-              <li>to stop getting the error for misspelling git commit use the command below</li>
               <ul>
                 <li>git config --global help.autocorrect1</li>
               </ul>
