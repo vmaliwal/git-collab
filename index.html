@@ -481,6 +481,9 @@
             <ul>
               <li>Git Config</li>
               <li>.gitignore</li>
+              <li>git diff [ --staged | --cached ]</li>
+              <li>git add --patch</li>
+              <li>git [command] --help or man git</li>
             </ul>
           </section>
           <section>
@@ -503,6 +506,34 @@
               <li>It is very important to have this file in your project root directory to avoid merge conflicts from auto-generated code from VM, IDE, etc.</li>
               <li>Google for gitignore nodejs/golang/java/android/iOS</li>
             </ul>
+          </section>
+          <section>
+            <h2>Diff Options</h2>
+            <pre><code>
+              #git diff [ --staged | --cached ]
+              $ git status
+              # At least 1 file is staged
+              $ git diff --staged
+              # Reveals the staged changes
+              $ git reset #to push those changes back to the working copy
+            </code></pre>
+          </section>
+          <section>
+            <h2>Break Changes into Smaller Pieces</h2>
+            <pre><code>
+              #git add --patch [file]
+              $ git add --patch
+              #Use s for smaller y, n, ...
+            </code></pre>
+          </section>
+          <section>
+            <h2>Get Git Help</h2>
+            <pre><code>
+              #git [command] --help or man git
+              $ git diff --help
+              $ man git
+              # Then use / to search for --ca
+            </code></pre>
           </section>
         </section>
 
