@@ -6,8 +6,9 @@
 
     <title>Git Collaboration</title>
 
-    <meta name="description" content="Intorduction to Git collaboration in a hackathon setting">
+    <meta name="description" content="How to code together using git.  Often students have to work individually in class so while they may understand git they don't understand how to work with a team to colloberate using git.">
     <meta name="author" content="Varun Maliwal">
+    <meta name="author" content="Alex Niderberg">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -40,95 +41,156 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
+
+
+
         <section>
-          <h1>Git Collaboration</h1>
-          <h3>.. in a hackathon</h3>
-          <p>
-            <small>Created By <br/> Varun Maliwal</a> / <a href="http://twitter.com/vroom_">@vroom_</a></small><br/>
-            <small>Software Engineer @ Capital One</small>
-          </p>
-          <p>
-            <a href="http://bit.ly/treehacks-git">http://bit.ly/treehacks-git</a>
-          </p>
-          <aside class="notes">
+          <section>
+            <h1>Git Collaboration</h1>
+            <h3>...Coding is better, together</h3>
+            <p>
+            </br>
+              <small>Updated By <br/> Alex Niderberg</a> / <a href="http://twitter.com/vroom_">@AlexNiderberg</a></small><br/>
+              <small>Master Software Engineer @ Capital One Labs</small>
+            </p>
+            </br>
+            <p>
+              <a href="http://bit.ly/1A1DKFE">http://bit.ly/1A1DKFE</a>
+            </p>
+            <aside class="notes">
+              <ul>
+                <li>We as a company visit many hackathons across country and realized that some students have
+              challenge working with git</li>
+              <li>The last thing you want to do is loosing your sleep while dealing with merge conflicts</li>
+              <li>Additionally we find students who are not using git effectively and intern wasting precious time at the Hackathons</li>
+              <li>Give intro to git and basic commands that will help you collaborate</li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h1>Software Development Life Cycle</h1>
+          </section>
+          <section>
+            <img src="images/idea.jpeg" alt="Idea">
+          </section>
+          <section>
+            <img src="images/BarnyChallengeAccepted.png" alt="Challenge Accepted" height="200">
+          </section>
+          <section>
+          <img src="images/victory.jpg" alt="Challenge Accepted">
+          </section>
+          <section>
+          <img src="images/Man_yelling_at_computer.JPG" alt="Challenge Accepted">
+          </section>
+          <section>
+            <img src="images/gitLogo.jpg">
+          </section>
+          <section>
+            <img src="images/gitflow.gif">
+          </section>
+        </section>
+
+
+
+        <section>
+          <section>
+            <h2>What is Git?</h2>
             <ul>
-              <li>We as a company visit many hackathons across country and realized that some students have
-            challenge working with git</li>
-            <li>The last thing you want to do is loosing your sleep while dealing with merge conflicts</li>
-            <li>Give intro to git and basic commands that will help you collaborate</li>
+              <li>distributed version control system</li>
+              <li>allows you to work off-line</li>
+              <li>provides a collaboration framework</li>
             </ul>
-          </aside>
-        </section>
-
-        <section>
-          <h2>What is Git?</h2>
-          <p>
-            A distributed version control system.. Helps you manage different versions of files and collaboration over period of time.
-          </p>
-        </section>
-
-        <!-- Example of nested vertical slides -->
-        <section>
-          <section>
-            <h2>Git Repository</h2>
-            <p>Git stores information about your project in .git subdirectory called as repository</p>
           </section>
           <section>
-            <h2>What does .git include?</h2>
+            <h2>Linus 2007 git overview</h2>
+            <img src="images/LinusViewDVCS.png" alt="Linus the value of distribuition">
+            </br>
+            <small>Source: <a href="https://www.youtube.com/watch?v=4XpnKHJAok8#t=819">Linus 2007 Git Introduction</a></small>
+            <aside class="notes">
+              <ul>
+                <li>
+                  Using CVCS penalizes you from committing and branching since it is so expensive.  This causes developers to have very large commits.
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <h2>Centralized VCS</h2>
+            <img src="images/CentralizedVCS.png">
+            </br>
+            <small>Source: <a href="http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/">Illustrated Distributed Version Control</a></small>
+          </section>
+          <section>
+            <h2>Distributed VCS</h2>
+            <img src="images/DistributedVCD.png">
+            </br>
+            <small>Source: <a href="http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/">Illustrated Distributed Version Control</a></small>
+            <aside  class="notes">
+              <ul>
+                <li>Every copy of a git branch becomes it's own branch when it falls off line or out of sync with origin.
+                </li>
+                <li>Git has a built in check for disk / file corruption since files are tracked using a hash
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section>
+            <img src="images/socialGit/bitbucket_github.png">
+          </section>
+          <section>
+            <img src="images/socialGit/github.png">
+          </section>
+          <section>
+            <img src="images/socialGit/github-branches.png">
+          </section>
+          <section>
+            <img src="images/socialGit/github-mybranches.png">
+          </section>
+          <section>
+            <img src="images/socialGit/github-PR-collaboration.png">
+          </section>
+          <section>
+            <h2>Animation Demo</h2>
+            <aside class="notes">
+              <ul>
+                <li>https://bitbucket.org/aln787/flightinfo</li>
+                <li>find the link to the other demo?? or it could jus be a missing branch</li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+
+
+
+        <section>
+          <section>
+            <h2>Key Git Concepts</h2>
             <ul>
-              <li>commit objects</li>
-              <li>HEAD - a set of reference to commit objects</li>
-              <li>..more..</li>
+              <li>Staging Area / Working Copy</li>
+              <li>Commit Object</li>
+              <li>.git repository</li>
+              <li>Branches</li>
+              <li>Stashing</li>
+              <li>Merging</li>
             </ul>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>Getting a Git repository</h2>
-            <ul>
-              <li>Initalize Repository into existing directory</li>
-              <li>Cloning Repository from remote server(github, bitbucket, etc.)</li>
-            </ul>
+            <aside class="notes">
+              <ul>
+                <li>Are git and github the same?</li>
+              </ul>
+            </aside>
           </section>
           <section>
-            <h2>Initializing Repository</h2>
-            <pre>
-              <code>
-              $ mkdir [project-name]
-              $ cd [project-name]
-              $ git init
-              </code>
-            </pre>
-            <pre>
-              <code>
-                    git-collab/
-                      .git/
-                        config
-                        description
-                        HEAD
-                        hooks/
-                        info/
-                        objects/
-                        refs/
-              </code>
-            </pre>
+            <h2>Edit / Stage / Commit</h2>
+            <img src="images/gitStages.png" height="300px">
+            <aside class="notes">
+              <ul>
+                <li>What you are actually staging is a snapshot</li>
+                <li>With every change you need to re-add it or stage it using git add</li>
+              </ul>
+            </aside>
           </section>
           <section>
-            <h2>Cloning existing repository</h2>
-            <pre>
-              <code>
-        $ git clone [git-url]
-        $ git clone https://github.com/vmaliwal/git-collab.git
-              </code>
-            </pre>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>Commit Objects</h2>
-            <p>Git is DAG that holds snapshots of commit objects as nodes</p>
+            <img src="images/git_local_remote.png">
           </section>
           <section>
             <h2>What does commit object hold?</h2>
@@ -141,61 +203,18 @@
           </section>
           <section data-background="http://git-scm.com/figures/18333fig0301-tn.png" data-background-size="600px">
           </section>
-
           <section>
-            <h2>Creating a commit object</h2>
-            <p>Create a new file or modify existing</p>
-            <pre>
-              <code>
-            $ echo "Introduction to Git" > README
-              </code>
-            </pre>
-            <pre>
-              <code>
-            $ git status
-            # On branch master
-            #
-            # Initial commit
-            #
-            # Untracked files:
-            #   (use "git add [file]..." 
-            # to include in what will be committed)
-            #
-            # README
-              </code>
-            </pre>
-            <aside class="notes">
-              When creating a new file or updating existing file and saving those changes will create a commit object
-            </aside>
+            <h2>Git Repository</h2>
+            <p>Git stores information about your project in .git subdirectory called as repository</p>
           </section>
-
           <section>
-            <pre>
-              <code>
-                $ git add [file-name]
-                $ git commit -m "Initial commit"
-              </code>
-            </pre>
-            <p>Also</p>
-            <pre>
-              <code>
-                $ git add . //to add all modified files, or
-                $ git commit -a -m "Initial commit"
-              </code>
-            </pre>
+            <h2>What does .git include?</h2>
+            <ul>
+              <li>commit objects</li>
+              <li>HEAD - a set of reference to commit objects</li>
+              <li>..more..</li>
+            </ul>
           </section>
-
-          <section>
-            <h2>My personal workflow</h2>
-            <ol>
-              <li>Make changes</li>
-              <li><span style="color: #1b91ff"> $ git status</span> - to verify what files I have changed</li>
-              <li><span style="color: #1b91ff"> $ git diff [file-name]</span> - to review a change made in a specific file</li>
-              <li><span style="color: #1b91ff">$ git commit -a -m "commit message"</span></li>
-            </ol>
-          </section>
-        </section>
-        <section>
           <section>
             <h2>Branching</h2>
             <p>A branch is collection of commit objects</p>
@@ -215,12 +234,22 @@
             </aside>
           </section>
           <section>
+            <img src="images/gitSourceTreeBranches-Large.png">
+          </section>
+          <section>
+            <img src="images/gitSourceTreeBranches-Small.png">
+          </section>
+          <section>
+            <h1>Stashing</h1>
+            <img src="images/gitStash-SourceTree.png">
+          </section>
+          <section>
             <h2>Switching to a new branch</h2>
             <pre>
               <code>
-                // creates a new branch
+                # creates a new branch
                 $ git branch [new-branch-name] 
-                // move HEAD to point to new branch
+                # move HEAD to point to new branch
                 $ git checkout [new-branch-name] 
               </code>
             </pre>
@@ -231,7 +260,10 @@
             </pre>
           </section>
           <section>
-            <h2>My personal workflow</h2>
+            <img src="images/gitflow.gif">
+          </section>
+          <section>
+            <h2>Example workflow</h2>
             <ol>
               <li>Create a new branch</li>
               <li>Make code changes</li>
@@ -240,10 +272,7 @@
               <li>If test success merge those changes back to master branch</li>
             </ol>
           </section>
-        </section>
-
-        <section>
-          <section>
+                    <section>
             <h2>Merging</h2>
             <pre>
               <code>$ git merge [branch-name]</code>
@@ -286,6 +315,229 @@
           </section>
         </section>
 
+
+
+
+        <section>
+          <section>
+            <h2>Git in Action</h2>
+            <ul>
+              <li>Status</li>
+              <li>Init</li>
+              <li>Clone</li>
+              <li>Diff</li>
+              <li>Commit</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Check for git repo</h2>
+            <pre>
+              <code>
+    $git status
+    fatal: Not a git repository (or any of the 
+    parent directories): .git
+              </code>
+            </pre>
+          </section>
+                    <section>
+            <h2>Initializing Repository</h2>
+            <pre>
+              <code>
+              $ mkdir [project-name]
+              $ cd [project-name]
+              $ git init
+              </code>
+            </pre>
+            <pre>
+              <code>
+                    git-collab/
+                      .git/
+                        config
+                        description
+                        HEAD
+                        hooks/
+                        info/
+                        objects/
+                        refs/
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Cloning existing repository</h2>
+            <pre>
+              <code>
+        $ git clone [git-url]
+        $ git clone https://github.com/vmaliwal/git-collab.git
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Untracked Changes / Files</h2>
+            <pre>
+              <code>
+    $ git status
+    On branch master
+    Your branch is up-to-date with 'origin/master'.
+
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git checkout -- <file>..." to discard changes in working directory)
+
+      modified:   README.md
+      modified:   index.html
+
+    Untracked files:
+      (use "git add <file>..." to include in what will be committed)
+
+      images/CentralizedVCS.png
+      images/DistributedVCD.png
+      images/LinusViewDVCS.png
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Git Diff</h2>
+            <pre>
+              <code>
+    $ git diff README.md 
+    diff --git a/README.md b/README.md
+    index f08ca69..10ea20b 100644
+    --- a/README.md
+    +++ b/README.md
+    @@ -1 +1,9 @@
+    -### Introduction to Git 
+    \ No newline at end of file
+    +### Introduction to Git 
+    +
+    +- run
+    +```
+    +npm install
+    +grunt serve
+    +```
+    +
+    +- Make changes by modifying index.html
+    \ No newline at end of file
+
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h2>Creating a commit object</h2>
+            <p>Create a new file or modify existing</p>
+            <pre>
+              <code>
+            $ echo "Introduction to Git" > README
+              </code>
+            </pre>
+            <pre>
+              <code>
+            $ git status
+            # On branch master
+            #
+            # Initial commit
+            #
+            # Untracked files:
+            #   (use "git add [file]..." 
+            # to include in what will be committed)
+            #
+            # README
+              </code>
+            </pre>
+            <aside class="notes">
+              When creating a new file or updating existing file and saving those changes will create a commit object
+            </aside>
+          </section>
+          <section>
+            <pre>
+              <code>
+                $ git add [file-name]
+                $ git commit -m "Initial commit"
+              </code>
+            </pre>
+            <p>Also</p>
+            <pre>
+              <code>
+                $ git add . //to add all modified files, or
+                $ git commit -a -m "Initial commit"
+              </code>
+            </pre>
+            <pre>
+              <code>
+                Git commit -a #is the same as using git add and then git commit
+                git config --global color.ui true
+              </code>
+            </pre>
+          </section>
+        </section>
+
+
+
+
+        <section>
+          <section>
+            <h2>Additional Git Concepts</h2>
+            <ul>
+              <li>Git Config</li>
+              <li>.gitignore</li>
+              <li>git diff [ --staged | --cached ]</li>
+              <li>git add --patch</li>
+              <li>git [command] --help or man git</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Git Config</h2>
+            <ul>
+              <li>$ git config --list</li>
+              <li>$ git config --global user.name "Your Name"</li>
+              <li>$ git config --global user.email yourEmail@gmail.com</li>
+              <li>$ git config --global push.default simple #remove verbose messaging about the git 2.0 change</li>
+              <li>$ git config --global core.editor "subl -n -w" #editor for commit messages</li>
+              <ul>
+                <li>$ git commit -a #will bring up sublimetext so you can enter you commit message</li>
+              </ul>
+            </ul>
+          </section>
+          <section>
+            <img src="images/supper-man.jpg" height="200">
+            <h2><span style="text-transform: lowercase;">.gitignore</span> the unsung hero</h2>
+            <ul>
+              <li>It is very important to have this file in your project root directory to avoid merge conflicts from auto-generated code from VM, IDE, etc.</li>
+              <li>Google for gitignore nodejs/golang/java/android/iOS</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Diff Options</h2>
+            <pre><code>
+              #git diff [ --staged | --cached ]
+              $ git status
+              # At least 1 file is staged
+              $ git diff --staged
+              # Reveals the staged changes
+              $ git reset #to push those changes back to the working copy
+            </code></pre>
+          </section>
+          <section>
+            <h2>Break Changes into Smaller Pieces</h2>
+            <pre><code>
+              #git add --patch [file]
+              $ git add --patch
+              #Use s for smaller y, n, ...
+            </code></pre>
+          </section>
+          <section>
+            <h2>Get Git Help</h2>
+            <pre><code>
+              #git [command] --help or man git
+              $ git diff --help
+              $ man git
+              # Then use / to search for --ca
+            </code></pre>
+          </section>
+        </section>
+
+
         <section>
           <section>
             <h2>Collaboration</h2>
@@ -296,9 +548,6 @@
               <li>Push local changes to remote</li>
             </ul>
           </section>
-        </section>
-
-        <section>
           <section>
             <h2>Remote repository</h2>
             <p>Remote repositories are versions of your project that are hosted on the Internet or network somewhere.</p>
@@ -322,14 +571,11 @@
             <pre>
               <code>
       $ git remote add origin [git-remote-repo-url].git
-      $ git push origin master
+      $ git push -u origin master
               </code>
             </pre>
             <p><span style="color: #1b91ff">origin</span> is a remote repository reference that git uses</p>
           </section>
-        </section>
-
-        <section>
           <section>
             <h2>Pulling remote changes</h2>
             <pre>
@@ -339,7 +585,6 @@
               </code>
             </pre>
           </section>
-          
           <section>
             <h2>Pushing changes to remote</h2>
             <pre>
@@ -349,15 +594,28 @@
               </code>
             </pre>
           </section>
+          <section>
+            <h2>Multiple Remotes</h2>
+            <pre>
+              <code>
+      origin  https://github.com/aln787/git-collab.git (fetch)
+      origin  https://github.com/aln787/git-collab.git (push)
+      14109fd767af:git-collab xvo202$ git remote add kdc https://github.kdc.capitalone.com/xvo202/git-collab.git
+      14109fd767af:git-collab xvo202$ git remote -v
+      kdc https://github.kdc.capitalone.com/xvo202/git-collab.git (fetch)
+      kdc https://github.kdc.capitalone.com/xvo202/git-collab.git (push)
+      origin  https://github.com/aln787/git-collab.git (fetch)
+      origin  https://github.com/aln787/git-collab.git (push)
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h1>Fork and Pull</h1>
+            <img src="images/socialGit/github-fork.png">
+          </section>
         </section>
 
-        <section>
-          <h2><span style="text-transform: lowercase;">.gitignore</span> the unsung hero</h2>
-          <ul>
-            <li>It is very important to have this file in your project root directory to avoid merge conflicts from auto-generated code from VM, IDE, etc.</li>
-            <li>Google for gitignore nodejs/golang/java/android/iOS</li>
-        </ul>
-        </section>
+
 
         <section>
           <section>
@@ -395,10 +653,10 @@
           <section>
             <pre>
               <code>
-  $ git merge develop
-  Auto-merging app.js
-  CONFLICT (content): Merge conflict in app.js
-  Automatic merge failed; fix conflicts and then commit the result.
+      $ git merge develop
+      Auto-merging app.js
+      CONFLICT (content): Merge conflict in app.js
+      Automatic merge failed; fix conflicts and then commit the result.
               </code>
             </pre>
           </section>
@@ -411,56 +669,83 @@
           </section>
         </section>
 
-        <section>
-          <section>
-            <h3>My personal collaboration workflow for a hackathon</h3>
-            <ol>
-              <li>Create new remote git repository</li>
-              <li>Intialize git into existing project(if exist and skip step 3)</li>
-              <li>Clone remote repository into local machine</li>
-              <li>Add project/framework specific .gitignore file</li>
-              <li><span style="color: #1b91ff">$ git commit -a -m "initial commit"</span></li>
-              <li><span style="color: #1b91ff">$ git push origin master</span></li>
-              <li>Make sure master branch only contains runnable/working code</li>
-              <li>Create develop branch <span style="color: #1b91ff"> $ git checkout -b develop</span></li>
-              <li>Add new changes, if any, and push develop to remote <span style="color: #1b91ff"> $ git push origin develop </span></li>
-            </ol>
-          </section>
 
-          <section>
-            <h3>..continue</h3>
-            <ol>
-              <li>Ask developer friend to clone remote repository</li>
-              <li>Crank out more code</li>
-              <li>Commit changes</li>
-              <li>If pushing to remote make sure to pull if there are any existing commit on remote</li>
-              <li>If code looks okay, merge develop to master</li>
-            </ol>
-          </section>
-        </section>
 
         <section>
-          <h2>Thank You</h2>
+          <section>
+            <h1>Tips and Tricks</h1>
+          </section>
+          <section>
+            <img src="images/safe.jpg" height="400">
+            <ul>
+              <li>If you are ever unsure what to do when using Git, copy your project directory.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Setting Up SSH Keys</h2>
+              <pre><code>
+    $ ls -al ~/.ssh
+    $ ssh-keygen -t rsa -b 4096 -C "youremail@email.com"
+    $ eval "$(ssh-agent -s)"
+    $ ssh-add ~/.ssh/id_rsa
+    $ cat ~/.ssh/id_rsa.pub 
+              </code></pre>
+              <p>Then add the output of the cat to your list of github ssh keys on the github site.</p>
+          </section>
+          <section>
+            <h2>Additional Git Commands</h2>
+            <ul>
+              <li>git diff HEAD^ --word-diff</li>
+              <ul>
+                <li>git config --global help.autocorrect1</li>
+              </ul>
+              <li>git config --global color.ui 1</li>
+              <li>git commit --amend -C HEAD</li>
+              <ul>
+                <li>Use this to add changes you forgot to add to the last commit that are currently staged</li>
+              </ul>
+            </ul>
+          </section>          
         </section>
+
+
 
         <section>
           <h3>References</h3>
           <ul>
-            <li><a href="http://git-scm.com/">http://git-scm.com/</a></li>
-            <li><a href="http://stackoverflow.com/questions/tagged/git"></a>http://stackoverflow.com</li>
-            <li><a href="https://help.github.com/">https://help.github.com/</a></li>
+            <!--http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control-->
+            <li>
+              <a href="http://git-scm.com/">http://git-scm.com/</a>
+            </li>
+            <li>
+              <a href="http://stackoverflow.com/questions/tagged/git">http://stackoverflow.com</a>
+              </li>
+            <li>
+              <a href="https://help.github.com/">https://help.github.com/</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=4XpnKHJAok8">May 3rd, 2007 - Linus Torvalds Git Talk</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=ZDR433b0HJY">Great git talk from one of the git scm writers</a>
+            </li>
+            <li>
+              <a href="https://www.atlassian.com/git/articles/10-years-of-git/">Git History</a>
+            </li>
+            <li>
+              <a href="https://github.com/vmaliwal/git-collab">Original Presentaion</a>
+            </li>
           </ul>
         </section>
 
+
+
+
       </div>
-
     </div>
-
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
-
     <script>
-
       // Full list of configuration options available at:
       // https://github.com/hakimel/reveal.js#configuration
       Reveal.initialize({
@@ -481,8 +766,6 @@
           { src: 'plugin/notes/notes.js', async: true }
         ]
       });
-
     </script>
-
   </body>
 </html>
