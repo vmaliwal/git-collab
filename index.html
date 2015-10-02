@@ -62,24 +62,28 @@
 
         <section>
           <h2>What is Git?</h2>
-          <p>
-            A distributed version control system.. Helps you manage different versions of files and collaboration over period of time.
-          </p>
+          <ul>
+            <li> A distributed version control system </li>
+            <li> Full history support </li>
+            <li> Version-tracking support, independent of central server</li>
+          </ul>
         </section>
 
         <!-- Example of nested vertical slides -->
         <section>
           <section>
             <h2>Git Repository</h2>
-            <p>Git stores information about your project in .git subdirectory called as repository</p>
+            <p> .git subdirectory is called as repository</p>
           </section>
           <section>
             <h2>What does .git include?</h2>
             <ul>
               <li>commit objects</li>
-              <li>HEAD - a set of reference to commit objects</li>
+              <li>HEAD</li>
+              <li>index</li>
               <li>..more..</li>
             </ul>
+            <p>.git can be opened and modified in text editor</p>
           </section>
         </section>
 
@@ -102,7 +106,7 @@
             </pre>
             <pre>
               <code>
-                    git-collab/
+                    git-example/
                       .git/
                         config
                         description
@@ -179,7 +183,7 @@
             <p>Also</p>
             <pre>
               <code>
-                $ git add . //to add all modified files, or
+                $ git add .
                 $ git commit -a -m "Initial commit"
               </code>
             </pre>
@@ -188,6 +192,7 @@
           <section>
             <h2>My personal workflow</h2>
             <ol>
+              <li>Intialize/Clone repo.</li>
               <li>Make changes</li>
               <li><span style="color: #1b91ff"> $ git status</span> - to verify what files I have changed</li>
               <li><span style="color: #1b91ff"> $ git diff [file-name]</span> - to review a change made in a specific file</li>
@@ -198,8 +203,10 @@
         <section>
           <section>
             <h2>Branching</h2>
-            <p>A branch is collection of commit objects</p>
-            <p>When intializing a git repo the default branch is master</p>
+            <ul>
+              <li>Collection of commit objects</li>
+              <li>Default branch is master</li>
+            </ul>
             <pre>
               <code>
                 (1) -- (2) -- (3)
@@ -218,9 +225,10 @@
             <h2>Switching to a new branch</h2>
             <pre>
               <code>
-                // creates a new branch
+                ##creates a new branch
                 $ git branch [new-branch-name] 
-                // move HEAD to point to new branch
+                
+                ##move HEAD to point to new branch
                 $ git checkout [new-branch-name] 
               </code>
             </pre>
@@ -288,8 +296,7 @@
 
         <section>
           <section>
-            <h2>Collaboration</h2>
-            <p>Distributed version control model to collaborate between multiple developers.</p>
+            <h2>How to Collaborate?</h2>
             <ul>
               <li>Remote repository</li>
               <li>Pull remote changes</li>
@@ -301,24 +308,34 @@
         <section>
           <section>
             <h2>Remote repository</h2>
-            <p>Remote repositories are versions of your project that are hosted on the Internet or network somewhere.</p>
             <ul>
               <li>Create a new remote repository(on github, bitbucket, etc.) and clone to your local machine. Or,</li>
               <li>Add existing git repo from your local machine to remote</li>
             </ul>
           </section>
           <section>
-            <h2>Create a new remote repo and clone to your local machine</h2>
-            <ul>
-              <li>Create new remote repository on github or bitbucket</li>
-              <li>$ git clone [git-remote-repo-url].git</li>
-            </ul>
+            <h2>How to create a remote repo?</h2>
+            <img src="https://help.github.com/assets/images/help/repository/repo-create.png"/>
+          </section>
+          <section>
+            <h2>How to create a remote repo?</h2>
+            <img src="https://github-images.s3.amazonaws.com/enterprise/2.0/assets/images/help/repository/repo-create-name.png"/>
+          </section>
+          <section>
+            <h2>Clone to your machine</h2>
+            <pre>
+              <code>
+      $ git clone [git-remote-repo-url].git
+              </code>
+            </pre>
             <p>As name suggests <span style="color: #1b91ff">clone</span> command can be used to clone any remote repository</p> 
           </section>
           <section>
-            <h2>Add existing git repo from local machine to remote</h2>
-            <p>Create new repository on <a href="https://help.github.com/articles/creating-a-new-repository/" title="">github</a> or bitbucket</p>
-            <p>On your local machine..</p>
+            <h2>Add existing repo</h2>
+            <ul>
+              <li>Create new repository on <a href="https://help.github.com/articles/creating-a-new-repository/" title="">github</a> or bitbucket</li>
+              <li>On your local machine..</li>
+            </ul>
             <pre>
               <code>
       $ git remote add origin [git-remote-repo-url].git
@@ -413,7 +430,7 @@
 
         <section>
           <section>
-            <h3>My personal collaboration workflow for a hackathon</h3>
+            <h3>My personal collaboration workflow</h3>
             <ol>
               <li>Create new remote git repository</li>
               <li>Intialize git into existing project(if exist and skip step 3)</li>
