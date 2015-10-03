@@ -54,7 +54,7 @@
             <ul>
               <li>We as a company visit many hackathons across country and realized that some students have
             challenge working with git</li>
-            <li>The last thing you want to do is loosing your sleep while dealing with merge conflicts</li>
+            <li>The last thing you want to do is losing your sleep while dealing with merge conflicts</li>
             <li>Give intro to git and basic commands that will help you collaborate</li>
             </ul>
           </aside>
@@ -67,6 +67,14 @@
           </p>
         </section>
 
+                <section>
+          <h2>Why is Git important?</h2>
+          <p>
+            Ever make a few changes and now nothing works? Git is here to save the day!
+          </p>
+          <p>Git allows you to revisit the entire history of your project and easily rollback to previous revisions.</p>
+        </section>
+
         <!-- Example of nested vertical slides -->
         <section>
           <section>
@@ -77,7 +85,7 @@
             <h2>What does .git include?</h2>
             <ul>
               <li>commit objects</li>
-              <li>HEAD - a set of reference to commit objects</li>
+              <li>HEAD - a pointer to the current commit and branch you are working on</li>
               <li>..more..</li>
             </ul>
           </section>
@@ -87,8 +95,8 @@
           <section>
             <h2>Getting a Git repository</h2>
             <ul>
-              <li>Initalize Repository into existing directory</li>
-              <li>Cloning Repository from remote server(github, bitbucket, etc.)</li>
+              <li>Initalize Repository into an existing directory</li>
+              <li>Cloning a Repository from remote server (github, bitbucket, etc.)</li>
             </ul>
           </section>
           <section>
@@ -100,6 +108,7 @@
               $ git init
               </code>
             </pre>
+            <!-- This might be over the top for the style of the talk (@jzarakas)-->
             <pre>
               <code>
                     git-collab/
@@ -116,6 +125,7 @@
           </section>
           <section>
             <h2>Cloning existing repository</h2>
+            <p>Cloning creates your own personal copy of a repository.
             <pre>
               <code>
         $ git clone [git-url]
@@ -128,13 +138,15 @@
         <section>
           <section>
             <h2>Commit Objects</h2>
+            <p>A commit object creats a snapshot of files in your project at a given point in time. It's a sort of bookmark that you can revisit at a later point in time.</p>
+            <!--Do they care about it being a dag?-->            
             <p>Git is DAG that holds snapshots of commit objects as nodes</p>
           </section>
           <section>
             <h2>What does commit object hold?</h2>
             <ul>
               <li>reference to parent commit, if any</li>
-              <li>tree - set of files conveying current state of the project</li>
+              <li>tree - set of files conveying current state of the files in the commit</li>
               <li>author info, commiter info, commit message, etc.</li>
             </ul>
             <p>Commit object is uniquely identified by a 40-character SHA1 hash</p>
@@ -176,6 +188,7 @@
                 $ git commit -m "Initial commit"
               </code>
             </pre>
+            <!-- I feel this shorthand is bad practice, but then again its probably OK for a hackathon -->
             <p>Also</p>
             <pre>
               <code>
@@ -238,7 +251,9 @@
               <li>Commit changes</li>
               <li>Run tests on code</li>
               <li>If test success merge those changes back to master branch</li>
+              <li>It is considered good practice to always have master contain runnable and compilable code.</li>
             </ol>
+
           </section>
         </section>
 
@@ -355,6 +370,7 @@
           <h2><span style="text-transform: lowercase;">.gitignore</span> the unsung hero</h2>
           <ul>
             <li>It is very important to have this file in your project root directory to avoid merge conflicts from auto-generated code from VM, IDE, etc.</li>
+            <li>This also prevents binaries and other build objects from being accidentally added.</li>
             <li>Google for gitignore nodejs/golang/java/android/iOS</li>
         </ul>
         </section>
