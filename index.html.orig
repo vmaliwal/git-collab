@@ -96,7 +96,12 @@
             <h2>What does .git include?</h2>
             <ul>
               <li>commit objects</li>
+<<<<<<< HEAD
+              <li>HEAD</li>
+              <li>index</li>
+=======
               <li>HEAD - a pointer to the current commit and branch you are working on</li>
+>>>>>>> 8678680f2c805c86fce6d2a246de3d0aeef54bad
               <li>..more..</li>
             </ul>
             <p>.git can be opened and modified in text editor</p>
