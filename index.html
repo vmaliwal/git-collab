@@ -230,11 +230,9 @@
             </ul>
             <pre>
               <code>
-                (1) -- (2) -- (3)
-                               |
-                             master
-                               |
-                              HEAD
+               HEAD -->  * fe1e7c5 Updated image 1
+                         * 234954a Added images
+                         * dce32e6 Initial commit 
               </code>
             </pre>
             <p>HEAD points to commit (3) on master branch</p>
@@ -284,16 +282,11 @@
             <h2>Before merging</h2>
             <pre>
               <code>
-                                    bug-fix 
-                                      |
-                         +----(4)----(5)
-                        /             
-              (1) -- (2) -- (3)
-                             |
-                           master
-                             |
-                            HEAD
-
+                COMMIT 1 --> * cd9e5f2 updated share url
+                COMMIT 2 --> * b7df983 added agenda
+                             |\  
+                COMMIT 3 --> | * 6936cfc added some definitions
+                COMMIT 4 --> * | 64d856e fixed typos 
               </code>
             </pre>
           </section>
@@ -301,19 +294,16 @@
             <h2>$ git merge bug-fix</h2>
             <pre>
               <code>
-                                    bug-fix 
-                                      |
-                         +----(4)----(5)+
-                        /                \
-              (1) -- (2) -- (3)----------(6)
-                                          |
-                                        master
-                                          |
-                                         HEAD
-
+                COMMIT 1 --> * cd9e5f2 updated share url
+                COMMIT 2 --> * b7df983 added agenda
+                             |\  
+                COMMIT 3 --> | * 6936cfc added some definitions
+                COMMIT 4 --> * | 64d856e fixed typos 
+                             |/  
+                COMMIT 5 --> * 3bc4271 merged branch
               </code>
             </pre>
-            <p>(6) contains changes between (5) and (2) merged into (3)</p>
+            <p>(5) contains changes between (3) and (4) merged together</p>
           </section>
         </section>
 
