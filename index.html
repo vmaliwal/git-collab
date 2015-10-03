@@ -266,11 +266,11 @@
             <h2>Before merging</h2>
             <pre>
               <code>
-                * cd9e5f2 updated share url
-                * b7df983 added agenda
-                |\  
-                | * 6936cfc added some definitions
-                * | 64d856e fixed typos 
+                COMMIT 1 --> * cd9e5f2 updated share url
+                COMMIT 2 --> * b7df983 added agenda
+                             |\  
+                COMMIT 3 --> | * 6936cfc added some definitions
+                COMMIT 4 --> * | 64d856e fixed typos 
               </code>
             </pre>
           </section>
@@ -278,16 +278,16 @@
             <h2>$ git merge bug-fix</h2>
             <pre>
               <code>
-                * cd9e5f2 updated share url
-                *   b7df983 added agenda
-                |\  
-                | * 6936cfc added some definitions
-                * | 64d856e fixed typos
-                |/  
-                * 3bc4271 merged branch
+                COMMIT 1 --> * cd9e5f2 updated share url
+                COMMIT 2 --> * b7df983 added agenda
+                             |\  
+                COMMIT 3 --> | * 6936cfc added some definitions
+                COMMIT 4 --> * | 64d856e fixed typos 
+                             |/  
+                COMMIT 5 --> * 3bc4271 merged branch
               </code>
             </pre>
-            <p>(3bc4271) contains changes between (6936cfc) and (6936cfc) merged together</p>
+            <p>(5) contains changes between (3) and (4) merged together</p>
           </section>
         </section>
 
