@@ -18,10 +18,10 @@ body {
   font-family: 'Source Sans Pro', Helvetica, sans-serif;
   font-size: 38px;
   font-weight: normal;
-  color: #fff; }
+  color: #49CDFF; }
 
 ::selection {
-  color: #fff;
+  color: #49CDFF;
   background: #bee4fd;
   text-shadow: none; }
 
@@ -34,12 +34,12 @@ body {
  *********************************************/
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
-  color: #fff;
+  color: #49CDFF;
   font-family: 'Source Sans Pro', Helvetica, sans-serif;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: normal;
-  text-transform: uppercase;
+  text-transform: none;
   text-shadow: none;
   word-wrap: break-word; }
 
@@ -181,7 +181,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #42affa;
+  color: #1244E9;
   text-decoration: none;
   -webkit-transition: color 0.15s ease;
   -moz-transition: color 0.15s ease;
@@ -193,7 +193,7 @@ body {
   border: none; }
 
 .reveal .roll span:after {
-  color: #fff;
+  color: #49CDFF;
   background: #068ee9; }
 
 /*********************************************
@@ -202,7 +202,7 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #fff;
+  /*border: 4px solid #49CDFF;*/
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal a img {
