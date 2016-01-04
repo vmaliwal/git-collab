@@ -443,6 +443,11 @@ origin  https://github.com/aln787/git-collab.git (push)
 <img src="images/socialGit/github-fork.png">
 
 
+##[Fork Exercise](https://github.com/C1-SoftwareEngineeringSummit/GitExercise)
+
+Note: https://github.com/aln787/git-collab/wiki#exercise
+
+
 ##Merge conflicts
 While pulling or merging a branch merge conflicts can occur due to conflicting changes
 
