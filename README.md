@@ -1,7 +1,7 @@
 ## Git overview
 This covers an overview of git.  It incorporates the key things you need to know, some of the history and some tips from working with git.
 
-###[View Presentation on the GH-Pages](http://aln787.github.io/git-collab/))
+###[View Presentation on the GH-Pages](http://aln787.github.io/git-collab/)
 - GH Pages URL structure: ```<username>.github.io/<project name>```
 
 ###View Locally
