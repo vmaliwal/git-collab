@@ -443,6 +443,11 @@ origin  https://github.com/aln787/git-collab.git (push)
 <img src="images/socialGit/github-fork.png">
 
 
+##[Fork Exercise](https://github.com/C1-SoftwareEngineeringSummit/GitExercise)
+
+Note: https://github.com/aln787/git-collab/wiki#exercise
+
+
 ##Merge conflicts
 While pulling or merging a branch merge conflicts can occur due to conflicting changes
 
@@ -500,10 +505,13 @@ Automatic merge failed; fix conflicts and then commit the result.
 $ ls -al ~/.ssh
 $ ssh-keygen -t rsa -b 4096 -C "youremail@email.com"
 $ eval "$(ssh-agent -s)"
-$ ssh-add ~/.ssh/id_rsa
-$ cat ~/.ssh/id_rsa.pub 
+$ ssh-add ~/.ssh/id_summit2016
+$ cat ~/.ssh/id_summit2016.pub 
 </code></pre>
-Then add the output of the cat to your list of github ssh keys on the github site.
+Then add the output of the cat to your list of github ssh keys on the github site.  
+<pre><code>$ ssh -T git@github.com</code></pre>
+</br>
+<a href="https://help.github.com/articles/generating-ssh-keys">Full Set-up details</a>
 
 
 ##Additional Git Commands
